@@ -1,0 +1,161 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Geral */
+*{
+  margin: 0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+/* Rootzin */
+:root{
+  --preto: black;
+  --cinza:#555;
+  --branco: white;
+  --cor-principal: #ba34db;
+  --cor-secundaria: rgb(0, 149, 255);
+  --fonte-texto: 'Open-sans', sans-serif;
+  --fonte-subtitulo:'Poppins', sans-serif;
+  --fonte-titulo: 'Montserrat', sans-serif;
+}
+/Coisas gerais/
+body{
+    color: var(--preto);
+}
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden; /* remove rolagem */
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-side {
+  flex: 1.1; /* ajustado para ser um pouco mais largo que a direita */
+  background: linear-gradient(to top right, #3b0a75, #ff69b4), url("assets/pet.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.right-side {
+  flex: 0.9; /* menor que a esquerda */
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 380px; /* mais parecido com o layout original */
+}
+
+.form-container h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f2f2f2;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.option span {
+  font-size: 14px;
+  color: #333;
+  max-width: 65%;
+}
+
+.option button {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.option button:hover {
+  opacity: 0.9;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-side {
+    flex: none;
+    height: 200px; /* define altura fixa da imagem */
+  }
+
+  .right-side {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .form-container {
+    max-width: 100%;
+  }
+
+  .option {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .option span {
+    max-width: 100%;
+  }
+
+  .option button {
+    width: 100%; /* botão ocupa largura total */
+  }
+}
